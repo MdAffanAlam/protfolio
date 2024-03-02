@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* NavBar.css */
+.nav {
+    background: #6a11cb;
+
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
+  
+    background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
+    padding: 1rem;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .heading {
+    color: white;
+  }
+  
+  .links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .links li {
+    margin: 0;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Media query for responsiveness 
+  @media (max-width: 768px) {
+    .links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .links li {
+      margin: 0.5rem 0;
+    }
+  }*/
+  
