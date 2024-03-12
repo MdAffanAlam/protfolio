@@ -1,4 +1,3 @@
-// Import React and necessary components from Tailwind CSS
 import React,{useEffect} from "react";
 
 const About = () => {
