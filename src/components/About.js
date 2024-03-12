@@ -1,15 +1,21 @@
 // Import React and necessary components from Tailwind CSS
-import React from "react";
+import React,{useEffect} from "react";
 
 const About = () => {
+  useEffect(() => {
+    document.body.classList.add("bg-gray-300");
+    return () => {
+      document.body.classList.remove("bg-gray-300");
+    };
+  }, []); 
   return (
-    <div className="font-montserrat min-h-screen bg-gray-200">
+    <div className="font-montserrat min-h-screen">
       <section
         id="about"
-        className="bg-gray-300 p-8 rounded-md shadow-md mt-8 text-center"
+        className="bg-gray-100 p-8 rounded-xl shadow-xl  mt-8 text-center"
       >
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
-        <p>
+        <p className="font-mono text-base text-gray-800 leading-7">
           As a B.Tech CSE (Computer Science and Engineering) student, my
           academic journey has not only equipped me with a comprehensive
           understanding of computer science principles but has also ignited a
@@ -38,7 +44,7 @@ const About = () => {
 
       <section
         id="skills"
-        className="bg-gray-200 p-8 rounded-md shadow-md mt-8"
+        className="bg-gray-100 p-8 rounded-xl shadow-xl mt-8 mb-4"
       >
         <h2 className="text-3xl font-bold mb-4">Skills</h2>
         <ul className="flex flex-wrap gap-4">
@@ -65,46 +71,6 @@ const About = () => {
           </li>
         </ul>
       </section>
-
-      <section id="projects" className="mt-8">
-        <h2 className="text-3xl font-bold mb-4 text-center">Projects</h2>
-
-        {/* Each project is a separate component to improve readability */}
-        <Project
-          title="Weather Application"
-          description="This Weather Application/website is built using HTML, CSS, and JavaScript. It provides users with real-time weather updates and forecasts, offering a user-friendly interface to stay informed about the current weather conditions."
-        />
-
-        <Project
-          title="Personal Portfolio"
-          description="This Personal Portfolio is a static website crafted with HTML and CSS. It serves as a digital resume, showcasing the creator's skills, experiences, and projects. The minimalistic design focuses on presenting the individual's professional profile effectively."
-        />
-
-        <Project
-          title="Email Validator"
-          description="The Email Validator Application/website, developed with HTML and CSS, offers a simple tool to verify the validity of email addresses. Users can input an email, and the application checks its format and structure, providing feedback on whether it is a valid email address."
-        />
-
-        <Project
-          title="iNotebook"
-          description="The iNotebook Application/website is a basic note-taking platform created using only HTML and CSS. It provides users with a platform to jot down quick notes, ideas, or reminders. The simplicity of the design enhances the ease of use for quick and efficient note-taking."
-        />
-
-        <Project
-          title="Word Counter"
-          description="The Word Counter Application/website, developed with HTML and CSS, offers a tool to count the number of words in a given text. Users can input text, and the application provides an instant count of words, helping with tasks such as writing essays or analyzing document content."
-        />
-      </section>
-    </div>
-  );
-};
-
-// Separate component for Project for improved readability
-const Project = ({ title, description }) => {
-  return (
-    <div className="project bg-gray-200 p-8 rounded-md shadow-md mb-8">
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p>{description}</p>
     </div>
   );
 };
