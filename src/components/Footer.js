@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="social-icons text-center bg-gray-100 border-1 border-gray-50 rounded-lg p-1">
+      <div className="social-icons text-center  bg-gradient-to-br from-gray-400 via-gray-400 to-gray-400 border-1 border-gray-50 rounded p-1">
         <a
           href="https://www.linkedin.com/"
           target="_blank"

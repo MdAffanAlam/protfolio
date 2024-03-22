@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Projects() {
- /* useEffect(() => {
-    document.body.style.background =
-    "linear-gradient(to bottom right, #D6BCFA, #FEB8D8, #FDC9F6)";// Replace with your desired gradient
+  useEffect(() => {
+    document.body.classList.add(
+      "text-gray-600",
+      "body-font",
+      "bg-gradient-to-br",
+      "from-gray-500",
+      "via-gray-500",
+      "to-gray-500"
+    );
     return () => {
-      document.body.style.background = "";
+      document.body.classList.remove(
+        "text-gray-600",
+        "body-font",
+        "bg-gradient-to-br",
+        "from-gray-500",
+        "via-gray-500",
+        "to-gray-500"
+      );
     };
-  }, []);*/
+  }, []);
   return (
     <section id="projects" className="mt-8">
-      <h2 className="text-3xl font-bold mb-4 text-center">Projects</h2>
-
-      {/* Each project is a separate component to improve readability */}
+      <h2 className="text-3xl font-bold mb-4 text-center text-black">Projects</h2>
       <Project
         title="Weather Application"
         description="This Weather Application/website is built using HTML, CSS, and JavaScript. It provides users with real-time weather updates and forecasts, offering a user-friendly interface to stay informed about the current weather conditions."
@@ -56,7 +67,6 @@ function Projects() {
   );
 }
 
-// Separate component for Project for improved readability
 const Project = ({
   title,
   description,
@@ -65,7 +75,7 @@ const Project = ({
   WebsiteLink,
 }) => {
   return (
-    <div className="project bg-gray-200 p-8 rounded-xl shadow-md mb-8">
+    <div className="project bg-gray-200 p-8 rounded-xl shadow-md mb-8 bg-gradient-to-br from-gray-400 via-gray-400 to-gray-400 text-black">
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p>{description}</p>
       <div className="mt-4">

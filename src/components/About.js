@@ -1,19 +1,34 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
   useEffect(() => {
-    document.body.classList.add("bg-gray-300");
+    document.body.classList.add(
+      "text-gray-600",
+      "body-font",
+      "bg-gradient-to-br",
+      "from-gray-500",
+      "via-gray-500",
+      "to-gray-500"
+    );
     return () => {
-      document.body.classList.remove("bg-gray-300");
+      document.body.classList.remove(
+        "text-gray-600",
+        "body-font",
+        "bg-gradient-to-br",
+        "from-gray-500",
+        "via-gray-500",
+        "to-gray-500"
+      );
     };
-  }, []); 
+  }, []);
+
   return (
     <div className="font-montserrat min-h-screen">
       <section
         id="about"
-        className="bg-gray-100 p-8 rounded-xl shadow-xl  mt-8 text-center"
+        className="bg-gray-100 p-8 rounded-xl shadow-xl  mt-8 text-center text-gray-400 body-font bg-gradient-to-br from-gray-400 via-gray-400 to-gray-400"
       >
-        <h2 className="text-3xl font-bold mb-4">About Me</h2>
+        <h2 className="text-3xl font-bold mb-4 text-black">About Me</h2>
         <p className="font-mono text-base text-gray-800 leading-7">
           As a B.Tech CSE (Computer Science and Engineering) student, my
           academic journey has not only equipped me with a comprehensive
@@ -43,31 +58,48 @@ const About = () => {
 
       <section
         id="skills"
-        className="bg-gray-100 p-8 rounded-xl shadow-xl mt-8 mb-4"
+        className="bg-gray-100 p-8 rounded-xl shadow-xl mt-8 mb-4 bg-gradient-to-br from-gray-400 via-gray-400 to-gray-400"
       >
-        <h2 className="text-3xl font-bold mb-4">Skills</h2>
+        <h2 className="text-3xl font-bold mb-4 text-black">Skills</h2>
         <ul className="flex flex-wrap gap-4">
-          <li className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer transition duration-300 hover:bg-blue-700">
-            HTML5
-          </li>
-          <li className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer transition duration-300 hover:bg-blue-700">
-            CSS3
-          </li>
-          <li className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer transition duration-300 hover:bg-blue-700">
-            JavaScript
-          </li>
-          <li className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer transition duration-300 hover:bg-blue-700">
-            React
-          </li>
-          <li className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer transition duration-300 hover:bg-blue-700">
-            Node.js
-          </li>
-          <li className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer transition duration-300 hover:bg-blue-700">
-            Java
-          </li>
-          <li className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer transition duration-300 hover:bg-blue-700">
-            C/C++
-          </li>
+          <div>
+            {" "}
+            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
+              HTML5
+            </li>
+          </div>
+          <div>
+            {" "}
+            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
+              CSS3
+            </li>
+          </div>
+          <div>
+            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
+              JavaScript
+            </li>
+          </div>
+          <div>
+            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
+              React
+            </li>
+          </div>
+          <div>
+            {" "}
+            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
+              Node.js
+            </li>
+          </div>
+          <div>
+            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
+              Java
+            </li>
+          </div>
+          <div>
+            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
+              C/C++
+            </li>
+          </div>
         </ul>
       </section>
     </div>
