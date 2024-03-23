@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  }
   return (
     <div className="bg-gradient-to-br from-gray-600 via-gray-600 to-gray-500 p-4">
       <nav className="flex justify-between items-center">
         <h3 className="text-black font-bold text-size-lg hover:tracking-widest">DevFolio</h3>
-        <ul className="flex gap-4">
+        <motion.ul className="flex gap-4" initial="hidden"
+  animate="visible"
+  variants={variants}>
           <li>
             <Link
               to="/intro"
@@ -40,7 +47,7 @@ const NavBar = () => {
               Contact
             </Link>
           </li>
-        </ul>
+        </motion.ul>
       </nav>
     </div>
   );
