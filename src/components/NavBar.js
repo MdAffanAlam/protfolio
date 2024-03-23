@@ -3,17 +3,24 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const NavBar = () => {
-  const variants = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-  }
   return (
     <div className="bg-gradient-to-br from-gray-600 via-gray-600 to-gray-500 p-4">
       <nav className="flex justify-between items-center">
-        <h3 className="text-black font-bold text-size-lg hover:tracking-widest">DevFolio</h3>
-        <motion.ul className="flex gap-4" initial="hidden"
-  animate="visible"
-  variants={variants}>
+        <motion.h3
+          className="text-black font-bold text-size-lg hover:tracking-widest"
+          initial={{ x: -100, opacity: 0.2 }} 
+          animate={{ x: 0, opacity: 1 }} 
+          transition={{ duration: 1 }}
+        >
+          DevFolio
+        </motion.h3>
+
+        <motion.ul
+          className="flex gap-4"
+          initial={{ x: 900 }}
+          animate={{ x: 0 }}
+          transition={{ duration: "1" }}
+        >
           <li>
             <Link
               to="/intro"

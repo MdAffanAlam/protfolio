@@ -40,7 +40,12 @@ function Intro() {
               for a Computer Science & Engineering student with a{" "}
               <span className=" font-bold">passion for coding</span>:
             </p>
-            <div className="flex justify-center">
+            <motion.div
+              className="flex justify-center"
+              initial={{ x: 900 }}
+              animate={{ x: 0 }}
+              transition={{ duration: "1" }}
+            >
               <a href="/projects">
                 <button className="ml-4 mr-4 inline-flex text-white shadow-xl inset-0 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
                   Projects
@@ -49,7 +54,7 @@ function Intro() {
               <button className="inline-flex text-white shadow-xl inset-0  border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800  hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
                 Download CV
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
