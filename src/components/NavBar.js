@@ -10,7 +10,7 @@ const NavBar = () => {
           className="text-black font-bold text-size-lg hover:tracking-widest"
           initial={{ x: -100, opacity: 0.2 }} 
           animate={{ x: 0, opacity: 1 }} 
-          transition={{ duration: 1 }}
+          transition={{ duration: 1 ,delay:1 }}
         >
           DevFolio
         </motion.h3>
@@ -19,7 +19,7 @@ const NavBar = () => {
           className="flex gap-4"
           initial={{ x: 900 }}
           animate={{ x: 0 }}
-          transition={{ duration: "1" }}
+          transition={{ duration: "1" ,delay:1}}
         >
           <li>
             <Link

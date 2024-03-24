@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import '../components/Animation.css';
+
 
 function Contact() {
   useEffect(() => {
@@ -39,58 +42,74 @@ function Contact() {
       ></iframe>
 
       <div className="container mx-auto mt-16 md:mt-24 text-center">
-        <div className="max-w-2xl mx-auto">
-          <form
-            action="https://formspree.io/f/myyqerzv"
-            method="POST"
-            className="mx-auto max-w-md"
-          >
-            <i className="fas fa-user text-black"></i>
+        <motion.div
+          className="max-w-2xl mx-auto mt-4 mb-4 shadow-xl rounded-lg"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <div className="relative w-full max-w-md mx-auto">
+            <div className="h-4 border-t-4 border-indigo-800 absolute top-0 left-0 w-full"></div>
+            <div className="h-4 border-t-4 border-red-800 absolute bottom-0 left-0 w-full"></div>
 
-            <label for="name" className="text-black font-bold">
-              Name:
-            </label>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              className="w-full bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900 "
-              autoComplete="off"
-              required
-            />
-            <i class="fas fa-envelope text-black"></i>
-            <label for="email" className="text-black font-bold">
-              Email:
-            </label>
-            <input
-              type="email"
-              name="Email"
-              placeholder="Email"
-              className="w-full bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
-              autoComplete="off"
-              required
-            />
-           <i className="fas fa-comment text-black"></i>
+            <motion.form
+              action="https://formspree.io/f/myyqerzv"
+              method="POST"
+              className="mx-auto max-w-md relative z-10 "
+              initial={{ opacity: 0, y: 2000 }}
+              animate={{ opacity: 2, y: 0 }}
+              transition={{ duration: 1, delay: 1 }}
+            >
+              <i className="fas fa-user text-black mt-4"></i>
 
+              <label htmlFor="name" className="text-black font-bold mt-4">
+                Name:
+              </label>
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                className="w-full mt-2 bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
+                autoComplete="off"
+                required
+              />
+              <i className="fas fa-envelope text-black mt-4"></i>
+              <label htmlFor="email" className="text-black font-bold mt-4">
+                Email:
+              </label>
+              <input
+                type="email"
+                name="Email"
+                placeholder="Email"
+                className="w-full mt-2 bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
+                autoComplete="off"
+                required
+              />
+              <i className="fas fa-comment text-black mt-4"></i>
 
-            <label for="name" className="text-black font-bold">
-              Ask Anythings:
-            </label>
-            <textarea
-              name="message"
-              placeholder="Message"
-              cols="30"
-              rows="6"
-              className="w-full font-bold bg-gray-200 bg-opacity-80 rounded-lg border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 resize-none leading-6 transition-colors duration-200 ease-in-out  hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
-              autoComplete="off"
-              required
-            ></textarea>
+              <label htmlFor="name" className="text-black font-bold mt-4">
+                Ask Anything:
+              </label>
+              <textarea
+                name="message"
+                placeholder="Message"
+                cols="30"
+                rows="6"
+                className="w-full mt-2 font-bold bg-gray-200 bg-opacity-80 rounded-lg border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 resize-none leading-6 transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
+                autoComplete="off"
+                required
+              ></textarea>
 
-            <button className="ml-4 mr-4 inline-flex text-white shadow-xl inset-0 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
-              Send Message
-            </button>
-          </form>
-        </div>
+              <motion.button
+                className="glow-on-hover ml-4 mr-4 mb-8  shadow-xl inset-0 border-0 py-2 px-6 rounded-full text-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Send Message
+              </motion.button>
+            </motion.form>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
