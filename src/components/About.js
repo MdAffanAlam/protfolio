@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import '../components/Animation.css';
 
 const About = () => {
   useEffect(() => {
@@ -56,52 +57,79 @@ const About = () => {
         </p>
       </section>
 
-      <section
-        id="skills"
-        className="bg-gray-100 p-8 rounded-xl shadow-xl mt-8 mb-4 bg-gradient-to-br from-gray-400 via-gray-400 to-gray-400"
-      >
-        <h2 className="text-3xl font-bold mb-4 text-black">Skills</h2>
-        <ul className="flex flex-wrap gap-4">
-          <div>
-            {" "}
-            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
-              HTML5
+      <div class="container">
+        <div class="col">
+          <h2 class="titulo">Technical<span className="space">Skills</span> </h2>
+          <ul class="skill">
+            <li>
+              <span class="blueline html"></span>
+              <em>HTML</em>
             </li>
-          </div>
-          <div>
-            {" "}
-            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
-              CSS3
+            <li>
+              <span class="blueline css"></span>
+              <em>CSS</em>
             </li>
-          </div>
-          <div>
-            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
-              JavaScript
+            <li>
+              <span class="blueline javascript"></span>
+              <em>Javascript</em>
             </li>
-          </div>
-          <div>
-            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
-              React
+            <li>
+              <span class="blueline javascript"></span>
+              <em>node js</em>
             </li>
-          </div>
-          <div>
-            {" "}
-            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
-              Node.js
+            <li>
+              <span class="blueline mongodb"></span>
+              <em>mongodb</em>
             </li>
-          </div>
-          <div>
-            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
-              Java
+            <li>
+              <span class="blueline java"></span>
+              <em>java</em>
             </li>
-          </div>
-          <div>
-            <li className="bg-blue-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-indigo-700 hover:shadow-lg hover:shadow-blue-900 rounded-full text-lg">
-              C/C++
+            <li>
+              <span class="blueline c"></span>
+              <em>c programming</em>
             </li>
-          </div>
-        </ul>
-      </section>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="plataformas titulo">Frameworks</h2>
+          <ul class="skill">
+            <li>
+              <span class="greenline bootstrap"></span>
+              <em>Bootstrap</em>
+            </li>
+            <li>
+              <span class="greenline tailwind"></span>
+              <em>Tailwind CSS</em>
+            </li>
+            <li>
+              <span class="greenline react"></span>
+              <em>React js</em>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="programas titulo">Professional<span className="space">Skills</span></h2>
+          <ul class="skill">
+            <li>
+              <span class="redline creativity"></span>
+              <em>Creativity</em>
+            </li>
+            <li>
+              <span class="redline communication"></span>
+              <em>Communication</em>
+            </li>
+            <li>
+              <span class="redline problem-solving"></span>
+              <em>Problem Solving</em>
+            </li>
+            <li>
+              <span class="redline team-work"></span>
+              <em>Team-Work</em>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

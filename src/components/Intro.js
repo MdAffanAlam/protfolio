@@ -1,7 +1,7 @@
-import React from "react";
+import React , {useEffect} from "react";
 import coverImage from "../images/cover.jpg";
 import { motion } from "framer-motion";
-import '../components/Animation.css';
+import "../components/Animation.css";
 
 function Intro() {
   const glowVariants = {
@@ -12,6 +12,27 @@ function Intro() {
       opacity: 1,
     },
   };
+
+  useEffect(() => {
+    document.body.classList.add(
+      "text-gray-600",
+      "body-font",
+      "bg-gradient-to-br",
+      "from-gray-500",
+      "via-gray-500",
+      "to-gray-500"
+    );
+    return () => {
+      document.body.classList.remove(
+        "text-gray-600",
+        "body-font",
+        "bg-gradient-to-br",
+        "from-gray-500",
+        "via-gray-500",
+        "to-gray-500"
+      );
+    };
+  }, []);
   return (
     <>
       <section className="text-gray-600 body-font bg-gradient-to-br from-gray-500 via-gray-500 to-gray-500">
@@ -99,6 +120,84 @@ function Intro() {
           </div>
         </div>
       </section>
+
+      <div class="container">
+        <div class="col">
+          <h2 class="titulo">
+            Technical<span className="space">Skills</span>{" "}
+          </h2>
+          <ul class="skill">
+            <li>
+              <span class="blueline html"></span>
+              <em>HTML</em>
+            </li>
+            <li>
+              <span class="blueline css"></span>
+              <em>CSS</em>
+            </li>
+            <li>
+              <span class="blueline javascript"></span>
+              <em>Javascript</em>
+            </li>
+            <li>
+              <span class="blueline javascript"></span>
+              <em>node js</em>
+            </li>
+            <li>
+              <span class="blueline mongodb"></span>
+              <em>mongodb</em>
+            </li>
+            <li>
+              <span class="blueline java"></span>
+              <em>java</em>
+            </li>
+            <li>
+              <span class="blueline c"></span>
+              <em>c programming</em>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="plataformas titulo">Frameworks</h2>
+          <ul class="skill">
+            <li>
+              <span class="greenline bootstrap"></span>
+              <em>Bootstrap</em>
+            </li>
+            <li>
+              <span class="greenline tailwind"></span>
+              <em>Tailwind CSS</em>
+            </li>
+            <li>
+              <span class="greenline react"></span>
+              <em>React js</em>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="programas titulo">
+            Professional<span className="space">Skills</span>
+          </h2>
+          <ul class="skill">
+            <li>
+              <span class="redline creativity"></span>
+              <em>Creativity</em>
+            </li>
+            <li>
+              <span class="redline communication"></span>
+              <em>Communication</em>
+            </li>
+            <li>
+              <span class="redline problem-solving"></span>
+              <em>Problem Solving</em>
+            </li>
+            <li>
+              <span class="redline team-work"></span>
+              <em>Team-Work</em>
+            </li>
+          </ul>
+        </div>
+      </div>
     </>
   );
 }
