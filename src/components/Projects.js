@@ -26,9 +26,9 @@ function Projects() {
   }, []);
   return (
     <section id="projects" className="mt-8">
-      <h2 className="text-3xl font-bold mb-4 text-center text-black">
+      <h1 className="text-3xl font-bold mb-4 text-center text-black">
         Projects
-      </h2>
+      </h1>
       <Project
         title="Weather Application"
         description="This Weather Application/website is built using HTML, CSS, and JavaScript. It provides users with real-time weather updates and forecasts, offering a user-friendly interface to stay informed about the current weather conditions."

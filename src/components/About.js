@@ -29,7 +29,7 @@ const About = () => {
         id="about"
         className="bg-gray-100 p-8 rounded-xl shadow-xl  mt-8 text-center text-gray-400 body-font bg-gradient-to-br from-gray-400 via-gray-400 to-gray-400"
       >
-        <h2 className="text-3xl font-bold mb-4 text-black">About Me</h2>
+        <h1 className="text-3xl font-bold mb-4 text-black">About Me</h1>
         <p className="font-mono text-base text-gray-800 leading-7">
           As a B.Tech CSE (Computer Science and Engineering) student, my
           academic journey has not only equipped me with a comprehensive
