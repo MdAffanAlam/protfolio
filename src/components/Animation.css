@@ -1,8 +1,8 @@
 /* button animation using pure css*/
 
 .glow-on-hover {
-    width: 170px;
-    height: 50px;
+    width: fit-content;
+    height: fit-content;
     border: none;
     outline: none;
     color: #fff;

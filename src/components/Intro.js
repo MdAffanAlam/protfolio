@@ -1,4 +1,4 @@
-import React , {useEffect} from "react";
+import React from "react";
 import coverImage from "../images/cover.jpg";
 import { motion } from "framer-motion";
 import "../components/Animation.css";
@@ -13,29 +13,9 @@ function Intro() {
     },
   };
 
-  useEffect(() => {
-    document.body.classList.add(
-      "text-gray-600",
-      "body-font",
-      "bg-gradient-to-br",
-      "from-gray-500",
-      "via-gray-500",
-      "to-gray-500"
-    );
-    return () => {
-      document.body.classList.remove(
-        "text-gray-600",
-        "body-font",
-        "bg-gradient-to-br",
-        "from-gray-500",
-        "via-gray-500",
-        "to-gray-500"
-      );
-    };
-  }, []);
   return (
     <>
-      <section className="text-gray-600 body-font bg-gradient-to-br from-gray-500 via-gray-500 to-gray-500">
+      <section className="body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <motion.div
             initial={{
@@ -73,17 +53,19 @@ function Intro() {
               animate={{ x: 0, opacity: 2 }}
               transition={{ duration: "1", delay: 1 }}
             >
-              <span className="text-blue-800 font-bold">Hi</span>,My name is{" "}
-              <span className="text-blue-800 font-bold">MD AFFAN ALAM</span>
-              <br className="hidden lg:inline-block" />
-              I'm{" "}
-              <span className="font-bold">
+              <span className="text-white  font-bold">Hi</span>{" "}
+              <span className="text-white">,</span>
+              <span className="text-white "> My name is </span>{" "}
+              <span className="text-white  font-bold">MD AFFAN ALAM</span>
+              <br className=" text-white hidden lg:inline-block" />
+              <span className="text-white">I'm</span>{" "}
+              <span className="text-white font-bold">
                 Computer Science & Enginnering
               </span>{" "}
-              Student
+              <span className="text-white">Student</span>
             </motion.h1>
             <motion.p
-              className="mb-8 leading-relaxed text-black"
+              className="mb-8 leading-relaxed text-white"
               initial={{ x: 900, opacity: 0 }}
               animate={{ x: 0, opacity: 2 }}
               transition={{ duration: "1", delay: 1 }}
@@ -96,7 +78,7 @@ function Intro() {
               <span className=" font-bold">passion for coding</span>:
             </motion.p>
             <motion.div
-              className="flex justify-center"
+              className="flex justify-center p-2"
               initial={{ x: 900, opacity: 0 }}
               whileHover={{ scale: 1.05 }}
               animate={{ x: 0, opacity: 1 }}
@@ -105,14 +87,14 @@ function Intro() {
               <a href="/projects">
                 <motion.button
                   variants={glowVariants}
-                  className=" glow-on-hover mr-4 inline-flex text-white border-0 py-2 px-12 rounded-full text-lg"
+                  className="glow-on-hover mr-4 inline-flex text-white border-0 py-2 px-12 rounded-full text-lg"
                 >
                   Projects
                 </motion.button>
               </a>
               <motion.button
                 variants={glowVariants}
-                className="glow-on-hover inline-flex text-white  border-0 py-2 px-6 rounded-full text-lg"
+                className="glow-on-hover inline-flex text-white  border-0 py-2 px-6 rounded-full text-lg w-auto md:w-fit"
               >
                 Download CV
               </motion.button>

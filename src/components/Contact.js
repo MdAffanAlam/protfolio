@@ -26,9 +26,9 @@ function Contact() {
   }, []);
   return (
     <section className="px-4 md:px-0 py-16 md:py-20">
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-black">
+      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-black">
         Feel Free to Contact us
-      </h2>
+      </h1>
 
       <iframe
         title="Location Map"

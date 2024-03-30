@@ -1,32 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import weather from "../images/weather.jpg";
 import protfolio from "../images/protfolio.jpg";
 import { motion } from "framer-motion";
 
 function Projects() {
-  useEffect(() => {
-    document.body.classList.add(
-      "text-gray-600",
-      "body-font",
-      "bg-gradient-to-br",
-      "from-gray-500",
-      "via-gray-500",
-      "to-gray-500"
-    );
-    return () => {
-      document.body.classList.remove(
-        "text-gray-600",
-        "body-font",
-        "bg-gradient-to-br",
-        "from-gray-500",
-        "via-gray-500",
-        "to-gray-500"
-      );
-    };
-  }, []);
+
   return (
-    <section id="projects" className="mt-8">
-      <h1 className="text-3xl font-bold mb-4 text-center text-black">
+    <section id="projects" className="mt-8 text-white">
+      <h1 className="text-3xl font-bold mb-4 text-center">
         Projects
       </h1>
       <Project
@@ -96,10 +77,10 @@ const Project = ({
       initial={{ x: -2000, opacity: 0.2 }}
       animate={{ x: 0, opacity: 2}}
       transition={{ duration: 1 }}
-      className="project bg-gray-200 p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center bg-gradient-to-br from-gray-500 via-gray-400 to-gray-400 mt-6 mb-2 text-black"
+      className="project  p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center0 mt-6 mb-2 text-white"
     >
       <motion.img
-        className={`mb-4 md:mb-0 md:mr-4 rounded-md ${imageSize}`}
+        className={`mb-4 md:mb-0 md:mr-4 rounded-md ${imageSize} mx-auto md:mx-0 md:mr-4 md:ml-0`}
         src={imageSrc}
         alt={title}
         animate={{

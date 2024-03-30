@@ -1,36 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import '../components/Animation.css';
 
 const About = () => {
-  useEffect(() => {
-    document.body.classList.add(
-      "text-gray-600",
-      "body-font",
-      "bg-gradient-to-br",
-      "from-gray-500",
-      "via-gray-500",
-      "to-gray-500"
-    );
-    return () => {
-      document.body.classList.remove(
-        "text-gray-600",
-        "body-font",
-        "bg-gradient-to-br",
-        "from-gray-500",
-        "via-gray-500",
-        "to-gray-500"
-      );
-    };
-  }, []);
 
   return (
     <div className="font-montserrat min-h-screen">
       <section
         id="about"
-        className="bg-gray-100 p-8 rounded-xl shadow-xl  mt-8 text-center text-gray-400 body-font bg-gradient-to-br from-gray-400 via-gray-400 to-gray-400"
+        className=" p-8 rounded-xl shadow-xl  mt-8 text-center body-font"
       >
-        <h1 className="text-3xl font-bold mb-4 text-black">About Me</h1>
-        <p className="font-mono text-base text-gray-800 leading-7">
+        <h1 className="text-3xl font-bold mb-4 text-white">About Me</h1>
+        <p className="font-mono text-base text-white leading-7">
           As a B.Tech CSE (Computer Science and Engineering) student, my
           academic journey has not only equipped me with a comprehensive
           understanding of computer science principles but has also ignited a
