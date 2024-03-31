@@ -89,7 +89,7 @@ const About = () => {
           </ul>
         </div>
         <div class="col">
-          <h2 class="programas titulo">Professional<span className="space">Skills</span></h2>
+          <h2 class="programas titulo prof">Professional<span className="space">Skills</span></h2>
           <ul class="skill">
             <li>
               <span class="redline creativity"></span>

@@ -192,7 +192,7 @@ h2.programas {
 }
 
 .space{
-    margin-left: 1rem;
+    margin-left: 0.4rem;
 }
 .html {
     width: 90%;
@@ -426,6 +426,12 @@ h2.programas {
     }
 }
 
+@media (max-width: 692px) {
+    .responsiveness{
+        flex-direction: row;
+    }
+}
+
 @media (max-width: 580px) {
     h2 {
         font-size: 1.1em;
@@ -441,5 +447,8 @@ h2.programas {
 
     .col {
         width: 90%;
+    }
+    .prof{
+        width: auto;
     }
 }

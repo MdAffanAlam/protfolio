@@ -1,32 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import '../components/Animation.css';
 
 
 function Contact() {
-  useEffect(() => {
-    document.body.classList.add(
-      "text-gray-600",
-      "body-font",
-      "bg-gradient-to-br",
-      "from-gray-500",
-      "via-gray-500",
-      "to-gray-500"
-    );
-    return () => {
-      document.body.classList.remove(
-        "text-gray-600",
-        "body-font",
-        "bg-gradient-to-br",
-        "from-gray-500",
-        "via-gray-500",
-        "to-gray-500"
-      );
-    };
-  }, []);
   return (
     <section className="px-4 md:px-0 py-16 md:py-20">
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-black">
+      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white">
         Feel Free to Contact us
       </h1>
 
@@ -60,9 +40,9 @@ function Contact() {
               animate={{ opacity: 2, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
             >
-              <i className="fas fa-user text-black mt-4"></i>
+              <i className="fas fa-user text-white mt-4"></i>
 
-              <label htmlFor="name" className="text-black font-bold mt-4">
+              <label htmlFor="name" className="text-white font-bold mt-4 ml-2">
                 Name:
               </label>
               <input
@@ -73,21 +53,21 @@ function Contact() {
                 autoComplete="off"
                 required
               />
-              <i className="fas fa-envelope text-black mt-4"></i>
-              <label htmlFor="email" className="text-black font-bold mt-4">
+              <i className="fas fa-envelope text-white mt-4"></i>
+              <label htmlFor="email" className="text-white font-bold mt-4 ml-2">
                 Email:
               </label>
               <input
                 type="email"
                 name="Email"
                 placeholder="Email"
-                className="w-full mt-2 bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
+                className="w-full mt-2 bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
                 autoComplete="off"
                 required
               />
-              <i className="fas fa-comment text-black mt-4"></i>
+              <i className="fas fa-comment text-white mt-4"></i>
 
-              <label htmlFor="name" className="text-black font-bold mt-4">
+              <label htmlFor="name" className="text-white font-bold mt-4 ml-2">
                 Ask Anything:
               </label>
               <textarea
@@ -95,7 +75,7 @@ function Contact() {
                 placeholder="Message"
                 cols="30"
                 rows="6"
-                className="w-full mt-2 font-bold bg-gray-200 bg-opacity-80 rounded-lg border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 resize-none leading-6 transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
+                className="w-full mt-2 font-bold bg-gray-200 bg-opacity-80 rounded-lg border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-900 py-2 px-4 mb-4 resize-none leading-6 transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
                 autoComplete="off"
                 required
               ></textarea>

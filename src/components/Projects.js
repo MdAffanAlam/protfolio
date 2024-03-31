@@ -4,12 +4,9 @@ import protfolio from "../images/protfolio.jpg";
 import { motion } from "framer-motion";
 
 function Projects() {
-
   return (
     <section id="projects" className="mt-8 text-white">
-      <h1 className="text-3xl font-bold mb-4 text-center">
-        Projects
-      </h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Projects</h1>
       <Project
         title="Weather Application"
         description="This Weather Application/website is built using HTML, CSS, and JavaScript. It provides users with real-time weather updates and forecasts, offering a user-friendly interface to stay informed about the current weather conditions."
@@ -59,6 +56,15 @@ function Projects() {
         imageSrc={weather}
         imageSize="h-32 w-32"
       />
+      <Project
+        title="Sports Zone"
+        description="The Sports Zone Application/website is a platform for sports enthusiasts. It provides users with the latest updates, news, and scores for various sports. Users can also interact with other enthusiasts through forums and discussions."
+        buildTech="React, Node.js, Express, MongoDB"
+        githubRepositoryLink="https://github.com/MdAffanAlam/sports-zone-frontend"
+        WebsiteLink="https://your-deployed-link.com"
+        imageSrc={weather}
+        imageSize="h-32 w-32"
+      />
     </section>
   );
 }
@@ -75,7 +81,7 @@ const Project = ({
   return (
     <motion.div
       initial={{ x: -2000, opacity: 0.2 }}
-      animate={{ x: 0, opacity: 2}}
+      animate={{ x: 0, opacity: 2 }}
       transition={{ duration: 1 }}
       className="project  p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center0 mt-6 mb-2 text-white"
     >
@@ -88,7 +94,7 @@ const Project = ({
           rotate: [0, 0, 270, 270, 0],
           borderRadius: ["20%", "20%", "50%", "50%", "20%"],
         }}
-        transition={{delay:3}}
+        transition={{ delay: 3 }}
       />
       <div>
         <h3 className="text-xl font-bold mb-2">{title}</h3>

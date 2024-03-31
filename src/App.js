@@ -14,7 +14,7 @@ function App() {
     <>
       <Router>
         <ParticleComponent />
-        <div className="content"> {/* Wrapper for your content */}
+        <div className="content">
           <NavBar />
           <Routes>
             <Route path="/" element={<Intro />} />

@@ -2,6 +2,7 @@ import React from "react";
 import coverImage from "../images/cover.jpg";
 import { motion } from "framer-motion";
 import "../components/Animation.css";
+import { Typewriter} from "react-simple-typewriter";
 
 function Intro() {
   const glowVariants = {
@@ -53,16 +54,23 @@ function Intro() {
               animate={{ x: 0, opacity: 2 }}
               transition={{ duration: "1", delay: 1 }}
             >
-              <span className="text-white  font-bold">Hi</span>{" "}
+              <span className="text-white  font-bold">Hi</span>
               <span className="text-white">,</span>
-              <span className="text-white "> My name is </span>{" "}
-              <span className="text-white  font-bold">MD AFFAN ALAM</span>
+              <span className="text-white ">My name is</span>{" "}
+              <span className="text-white  font-bold">MD AFFAN ALAM</span>{" "}
               <br className=" text-white hidden lg:inline-block" />
-              <span className="text-white">I'm</span>{" "}
-              <span className="text-white font-bold">
-                Computer Science & Enginnering
-              </span>{" "}
-              <span className="text-white">Student</span>
+              <span className="text-white">I'm a</span>{" "}
+              <span className="font-bold text-green-500">
+                <Typewriter
+                  loop
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={70}
+                  delaySpeed={1000}
+                  words={["CSE Student", "Web Developer", "Problem Solver","Programmer"]}
+                />
+              </span>
             </motion.h1>
             <motion.p
               className="mb-8 leading-relaxed text-white"
@@ -103,7 +111,7 @@ function Intro() {
         </div>
       </section>
 
-      <div class="container">
+      <div class="container responsiveness">
         <div class="col">
           <h2 class="titulo">
             Technical<span className="space">Skills</span>{" "}
@@ -135,7 +143,7 @@ function Intro() {
             </li>
             <li>
               <span class="blueline c"></span>
-              <em>c programming</em>
+              <em>c</em>
             </li>
           </ul>
         </div>
@@ -148,7 +156,7 @@ function Intro() {
             </li>
             <li>
               <span class="greenline tailwind"></span>
-              <em>Tailwind CSS</em>
+              <em>Tailwind Css</em>
             </li>
             <li>
               <span class="greenline react"></span>
@@ -157,7 +165,7 @@ function Intro() {
           </ul>
         </div>
         <div class="col">
-          <h2 class="programas titulo">
+          <h2 class="programas titulo prof">
             Professional<span className="space">Skills</span>
           </h2>
           <ul class="skill">
@@ -171,7 +179,7 @@ function Intro() {
             </li>
             <li>
               <span class="redline problem-solving"></span>
-              <em>Problem Solving</em>
+              <em>Problem-Solving</em>
             </li>
             <li>
               <span class="redline team-work"></span>

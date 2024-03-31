@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import logo from "../images/logo.png";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,15 +13,24 @@ const NavBar = () => {
   return (
     <div className="p-4 text-white">
       <nav className="flex justify-between items-center">
-        
-        <motion.h3
-          className=" font-bold text-size-lg hover:tracking-widest"
-          initial={{ x: -100, opacity: 0.2 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          DevFolio
-        </motion.h3>
+        <div className="flex items-center">
+          <motion.img
+            src={logo}
+            alt="logo"
+            className="h-10 mr-2"
+            initial={{ x: -100, opacity: 0.2 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          />
+          <motion.h3
+            className="font-bold text-size-lg hover:tracking-widest"
+            initial={{ x: -100, opacity: 0.2 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            DevFolio
+          </motion.h3>
+        </div>
 
         <div className="lg:hidden">
           <button
@@ -41,9 +51,7 @@ const NavBar = () => {
         </div>
 
         <motion.ul
-          className={`${
-            isOpen ? "block" : "hidden"
-          } lg:flex lg:gap-4`}
+          className={`${isOpen ? "block" : "hidden"} lg:flex lg:gap-4`}
           initial={{ x: 900 }}
           animate={{ x: 0 }}
           transition={{ duration: "1", delay: 1 }}
