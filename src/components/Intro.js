@@ -2,7 +2,8 @@ import React from "react";
 import coverImage from "../images/cover.jpg";
 import { motion } from "framer-motion";
 import "../components/Animation.css";
-import { Typewriter} from "react-simple-typewriter";
+import { Link } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 function Intro() {
   const glowVariants = {
@@ -68,7 +69,12 @@ function Intro() {
                   typeSpeed={90}
                   deleteSpeed={110}
                   delaySpeed={1500}
-                  words={["CSE Student", "Web Developer", "Problem Solver","Programmer"]}
+                  words={[
+                    "CSE Student",
+                    "Web Developer",
+                    "Problem Solver",
+                    "Programmer",
+                  ]}
                 />
               </span>
             </motion.h1>
@@ -92,20 +98,22 @@ function Intro() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
             >
-              <a href="/projects">
+              <Link to="/projects">
                 <motion.button
                   variants={glowVariants}
                   className="glow-on-hover mr-4 inline-flex text-white border-0 py-2 px-12 rounded-full text-lg"
                 >
                   Projects
                 </motion.button>
-              </a>
-              <motion.button
-                variants={glowVariants}
-                className="glow-on-hover inline-flex text-white  border-0 py-2 px-6 rounded-full text-lg w-auto md:w-fit"
-              >
-                Download CV
-              </motion.button>
+              </Link>
+              <Link to="/path/to/your/resume.pdf" target="_blank" download>
+                <motion.button
+                  variants={glowVariants}
+                  className="glow-on-hover inline-flex text-white  border-0 py-2 px-6 rounded-full text-lg w-auto md:w-fit"
+                >
+                  Download CV
+                </motion.button>
+              </Link>
             </motion.div>
           </div>
         </div>
