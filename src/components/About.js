@@ -22,7 +22,7 @@ const About = () => {
           className="flex justify-center items-center"
           initial={{ y: -2000, opacity: 0.6}}
           animate={{ y: [0, -10, 0], opacity: 1}}
-          transition={{ duration: 2, repeat: Infinity }}
+          transition={{ duration: 2, repeat: Infinity }} 
         >
           <img
             className="rounded-full mb-4 md:w-1/2 lg:w-1/4 xl:w-1/5"
