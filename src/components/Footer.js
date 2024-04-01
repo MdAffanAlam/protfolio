@@ -30,11 +30,11 @@ function Footer() {
           initial={{ x: 900, opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}
           transition={{ duration: "1", delay: 1 }}
-          href="https://telegram.org/"
+          href="https://www.instagram.com/i_affan5?igsh=MWVybDc5ZXFkcDZpeg=="
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-telegram  text-white bg-gray-350 hover:bg-gray-500 border-2 border-white hover:border-black rounded-full m-2 p-3 transform hover:scale-150 transition-all duration-300 hover:shadow-lg hover:shadow-gray-950"></i>
+          <i className="fab fa-instagram text-white bg-gray-350 hover:bg-gray-500 border-2 border-white hover:border-black rounded-full m-2 p-3 transform hover:scale-150 transition-all duration-300 hover:shadow-lg hover:shadow-gray-950"></i>
         </motion.a>
         <motion.a
           initial={{ x: 900, opacity: 0 }}

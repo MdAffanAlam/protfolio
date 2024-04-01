@@ -453,3 +453,8 @@ h2.programas {
         width: auto;
     }
 }
+@media (min-width: 1600px) {
+    .prof{
+        width: auto;
+    }
+  }

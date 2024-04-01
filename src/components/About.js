@@ -1,6 +1,7 @@
 import React from "react";
 import "../components/Animation.css";
 import aboutImg from "../images/AboutImg.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -9,16 +10,33 @@ const About = () => {
         id="about"
         className=" p-8 rounded-xl shadow-xl  mt-8 text-center body-font"
       >
-        <h1 className="text-3xl font-bold mb-4 text-white">About Me</h1>
-        <div className="flex justify-center items-center">
+        <motion.h1
+          className="text-3xl font-bold mb-4 text-white"
+          initial={{ x: -2000, opacity: 0 }}
+          animate={{ x: 0, opacity: 2 }}
+          transition={{ duration: 1 }}
+        >
+          About Me
+        </motion.h1>
+        <motion.div
+          className="flex justify-center items-center"
+          initial={{ y: -2000, opacity: 0.6}}
+          animate={{ y: [0, -10, 0], opacity: 1}}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
           <img
-            className="rounded-full mb-4 md:w-1/2 lg:w-1/3 xl:w-1/4"
+            className="rounded-full mb-4 md:w-1/2 lg:w-1/4 xl:w-1/5"
             src={aboutImg}
             alt="Profile"
           />
-        </div>
+        </motion.div>
 
-        <p className="font-mono text-base text-white leading-7">
+        <motion.p
+          className="font-mono text-base text-white leading-7"
+          initial={{ x: 3000, opacity: 0 }}
+          animate={{ x: 0, opacity: 2 }}
+          transition={{ duration: 2 }}
+        >
           As a B.Tech CSE (Computer Science and Engineering) student, my
           academic journey has not only equipped me with a comprehensive
           understanding of computer science principles but has also ignited a
@@ -42,7 +60,7 @@ const About = () => {
           academic pursuits into a dynamic exploration of turning concepts into
           tangible, impactful solutions in the ever-evolving landscape of
           technology.
-        </p>
+        </motion.p>
       </section>
 
       <div class="container">
