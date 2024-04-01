@@ -10,7 +10,7 @@ function Footer() {
           initial={{ x: 900, opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}
           transition={{ duration: "1", delay: 1 }}
-          href="https://www.linkedin.com/"
+          href="https://www.linkedin.com/in/md-affan-alam-839487241"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -20,7 +20,7 @@ function Footer() {
           initial={{ x: 900, opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}
           transition={{ duration: "1", delay: 1 }}
-          href="https://www.facebook.com/"
+          href="https://www.facebook.com/share/oGzUquCRveJRiJJy/?mibextid=qi2Omg"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -30,7 +30,7 @@ function Footer() {
           initial={{ x: 900, opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}
           transition={{ duration: "1", delay: 1 }}
-          href="https://twitter.com/"
+          href="https://telegram.org/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -40,7 +40,7 @@ function Footer() {
           initial={{ x: 900, opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}
           transition={{ duration: "1", delay: 1 }}
-          href="https://github.com/"
+          href="https://github.com/MdAffanAlam"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -50,7 +50,7 @@ function Footer() {
           initial={{ x: 900, opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}
           transition={{ duration: "1", delay: 1 }}
-          href="https://twitter.com/"
+          href="https://x.com/MdAffanAlam8?s=08"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -58,8 +58,8 @@ function Footer() {
         </motion.a>
 
         <motion.div
-          initial={{opacity: 0 }}
-          animate={{opacity: 2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 2 }}
           transition={{ duration: "1", delay: 1 }}
         >
           <i className="fas fa-envelope text-white mt-4 mr-3"></i>

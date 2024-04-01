@@ -1,8 +1,8 @@
 import React from "react";
-import '../components/Animation.css';
+import "../components/Animation.css";
+import aboutImg from "../images/AboutImg.jpg";
 
 const About = () => {
-
   return (
     <div className="font-montserrat min-h-screen">
       <section
@@ -10,6 +10,14 @@ const About = () => {
         className=" p-8 rounded-xl shadow-xl  mt-8 text-center body-font"
       >
         <h1 className="text-3xl font-bold mb-4 text-white">About Me</h1>
+        <div className="flex justify-center items-center">
+          <img
+            className="rounded-full mb-4 md:w-1/2 lg:w-1/3 xl:w-1/4"
+            src={aboutImg}
+            alt="Profile"
+          />
+        </div>
+
         <p className="font-mono text-base text-white leading-7">
           As a B.Tech CSE (Computer Science and Engineering) student, my
           academic journey has not only equipped me with a comprehensive
@@ -39,7 +47,9 @@ const About = () => {
 
       <div class="container">
         <div class="col">
-          <h2 class="titulo">Technical<span className="space">Skills</span> </h2>
+          <h2 class="titulo">
+            Technical<span className="space">Skills</span>{" "}
+          </h2>
           <ul class="skill">
             <li>
               <span class="blueline html"></span>
@@ -89,7 +99,9 @@ const About = () => {
           </ul>
         </div>
         <div class="col">
-          <h2 class="programas titulo prof">Professional<span className="space">Skills</span></h2>
+          <h2 class="programas titulo prof">
+            Professional<span className="space">Skills</span>
+          </h2>
           <ul class="skill">
             <li>
               <span class="redline creativity"></span>

@@ -65,9 +65,9 @@ function Intro() {
                   loop
                   cursor
                   cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={70}
-                  delaySpeed={1000}
+                  typeSpeed={90}
+                  deleteSpeed={110}
+                  delaySpeed={1500}
                   words={["CSE Student", "Web Developer", "Problem Solver","Programmer"]}
                 />
               </span>
