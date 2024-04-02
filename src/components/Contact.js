@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import '../components/Animation.css';
-
+import "../components/Animation.css";
 
 function Contact() {
   return (
@@ -39,6 +38,7 @@ function Contact() {
               initial={{ opacity: 0, y: 2000 }}
               animate={{ opacity: 2, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
+              data-netlify="true"
             >
               <i className="fas fa-user text-white mt-4"></i>
 
@@ -47,8 +47,8 @@ function Contact() {
               </label>
               <input
                 type="text"
-                name="username"
-                placeholder="Username"
+                name="name"
+                placeholder="name"
                 className="w-full mt-2 bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
                 autoComplete="off"
                 required

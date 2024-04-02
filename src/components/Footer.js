@@ -64,10 +64,10 @@ function Footer() {
         >
           <i className="fas fa-envelope text-white mt-4 mr-3"></i>
           <a
-            href="mailto:mdaffanalam2022@email.com"
+            href="mailto:mdaffanalam2022@gmail.com"
             className="text-white font-bold text-size-lg hover:tracking-widest"
           >
-            mdaffanalam2022@email.com
+            mdaffanalam2022@gmail.com
           </a>
 
           <p class="leading-normal my-3 text-white">
