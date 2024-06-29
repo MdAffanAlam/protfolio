@@ -46,7 +46,7 @@ nav {
 }
 
 /* Media query for smaller screens */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .hamburger-menu {
     display: block; /* Display the hamburger menu icon */
   }

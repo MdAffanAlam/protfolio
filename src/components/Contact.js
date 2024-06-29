@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../components/Animation.css";
-import contactImg from "../images/contact.png"
+
 
 function Contact() {
   return (
@@ -22,9 +22,7 @@ function Contact() {
       ></iframe>
 
       <div className="container mx-auto mt-16 md:mt-24 flex justify-center items-center">
-      <div className="hidden md:block md:w-1/3">
-          <img src={contactImg} alt="Descriptive Alt Text" className="w-full h-auto object-contain" />
-        </div>
+     
         <motion.div
           className="max-w-2xl mx-auto mt-4 mb-4 shadow-xl rounded-lg md:w-2/3"
           initial={{ opacity: 0, scale: 0.5 }}
