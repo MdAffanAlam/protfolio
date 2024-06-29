@@ -1,50 +1,59 @@
-*{
-    margin: 0;
-    padding: 0;
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
 }
-/* NavBar.css */
-.nav {
-    background: #6a11cb;
 
-    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
-  
-    background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9));
-    padding: 1rem;
+/* Styling for the navigation bar */
+.nav {
+  background: #6a11cb; /* Fallback for older browsers */
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 1rem;
+}
+
+/* Styling for the navigation elements */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for the heading */
+.heading {
+  color: white;
+}
+
+/* Styling for the navigation links */
+.links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.links li {
+  margin: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Styling for the hamburger menu */
+.hamburger-menu {
+  display: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 900px) {
+  .hamburger-menu {
+    display: block; /* Display the hamburger menu icon */
   }
   
-  nav {
+  .mobile_links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .heading {
-    color: white;
-  }
-  
-  .links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .links li {
-    margin: 0;
-  }
-  
-  .links a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  @media (max-width: 768px) {
-    .links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .links li {
-      margin: 0.5rem 0;
-    }
-  }
-  
+}

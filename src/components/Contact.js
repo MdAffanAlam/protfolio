@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../components/Animation.css";
+import contactImg from "../images/contact.png"
 
 function Contact() {
   return (
@@ -20,9 +21,12 @@ function Contact() {
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
 
-      <div className="container mx-auto mt-16 md:mt-24 text-center">
+      <div className="container mx-auto mt-16 md:mt-24 flex justify-center items-center">
+      <div className="hidden md:block md:w-1/3">
+          <img src={contactImg} alt="Descriptive Alt Text" className="w-full h-auto object-contain" />
+        </div>
         <motion.div
-          className="max-w-2xl mx-auto mt-4 mb-4 shadow-xl rounded-lg"
+          className="max-w-2xl mx-auto mt-4 mb-4 shadow-xl rounded-lg md:w-2/3"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -30,47 +34,53 @@ function Contact() {
           <div className="relative w-full max-w-md mx-auto">
             <div className="h-4 border-t-4 border-indigo-800 absolute top-0 left-0 w-full"></div>
             <div className="h-4 border-t-4 border-red-800 absolute bottom-0 left-0 w-full"></div>
-
             <motion.form
               action="https://formspree.io/f/myyqerzv"
               method="POST"
-              className="mx-auto max-w-md relative z-10 "
+              className="mx-auto max-w-md relative z-10"
               initial={{ opacity: 0, y: 2000 }}
-              animate={{ opacity: 2, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
               data-netlify="true"
             >
-              <i className="fas fa-user text-white mt-4"></i>
-
               <label htmlFor="name" className="text-white font-bold mt-4 ml-2">
-                Name:
+                <i className="fas fa-user text-white mt-4"></i> Name:
               </label>
-              <input
+              <motion.input
                 type="text"
                 name="name"
-                placeholder="name"
+                placeholder="Name"
                 className="w-full mt-2 bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
                 autoComplete="off"
                 required
+                whileHover={{ scale: 1.05 }}
+                whileFocus={{
+                  borderColor: "#5A67D8",
+                  backgroundColor: "#FFFFFF",
+                  boxShadow: "0 0 0 2px #5A67D8",
+                }}
               />
-              <i className="fas fa-envelope text-white mt-4"></i>
               <label htmlFor="email" className="text-white font-bold mt-4 ml-2">
-                Email:
+                <i className="fas fa-envelope text-white mt-4"></i> Email:
               </label>
-              <input
+              <motion.input
                 type="email"
                 name="Email"
                 placeholder="Email"
-                className="w-full mt-2 bg-gray-200 bg-opacity-80 rounded-full border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
+                className="w-full mt-2 bg-gray-200 bg-opacity-80 rounded-full border border-gray-900 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-2 px-4 mb-4 transition-colors duration-200 ease-in-out placeholder-gray-400 font-bold hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
                 autoComplete="off"
                 required
+                whileHover={{ scale: 1.05 }}
+                whileFocus={{
+                  borderColor: "#5A67D8",
+                  backgroundColor: "#FFFFFF",
+                  boxShadow: "0 0 0 2px #5A67D8",
+                }}
               />
-              <i className="fas fa-comment text-white mt-4"></i>
-
-              <label htmlFor="name" className="text-white font-bold mt-4 ml-2">
-                Ask Anything:
+              <label htmlFor="message" className="text-white font-bold mt-4 ml-2">
+                <i className="fas fa-comment text-white mt-4"></i> Ask Anything:
               </label>
-              <textarea
+              <motion.textarea
                 name="message"
                 placeholder="Message"
                 cols="30"
@@ -78,10 +88,15 @@ function Contact() {
                 className="w-full mt-2 font-bold bg-gray-200 bg-opacity-80 rounded-lg border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-900 py-2 px-4 mb-4 resize-none leading-6 transition-colors duration-200 ease-in-out hover:bg-gray-300 hover:shadow-lg hover:shadow-gray-900"
                 autoComplete="off"
                 required
-              ></textarea>
-
+                whileHover={{ scale: 1.05 }}
+                whileFocus={{
+                  borderColor: "#5A67D8",
+                  backgroundColor: "#FFFFFF",
+                  boxShadow: "0 0 0 2px #5A67D8",
+                }}
+              ></motion.textarea>
               <motion.button
-                className="glow-on-hover ml-4 mr-4 mb-8  shadow-xl inset-0 border-0 py-2 px-6 rounded-full text-lg"
+                className="glow-on-hover ml-4 mr-4 mb-8 shadow-xl inset-0 border-0 py-2 px-6 rounded-full text-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

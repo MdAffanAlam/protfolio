@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Hamburger from 'hamburger-react';
 import logo from "../images/logo.png";
+import "./NavBar.css";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setOpen(!isOpen);
   };
+
+  const handleClick= () =>{
+    setOpen(false);
+  }
 
   return (
     <div className="p-4 text-white">
@@ -23,7 +29,7 @@ const NavBar = () => {
             transition={{ duration: 1, delay: 1 }}
           />
           <motion.h3
-            className="font-bold text-size-lg hover:tracking-widest"
+            className="font-bold text-xl hover:tracking-widest"
             initial={{ x: -100, opacity: 0.2 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -32,26 +38,11 @@ const NavBar = () => {
           </motion.h3>
         </div>
 
-        <div className="lg:hidden">
-          <button
-            onClick={toggleMenu}
-            className="block text-gray-400 hover:text-gray-200 focus:text-gray-200 focus:outline-none"
-          >
-            <svg
-              className="h-6 w-6 fill-current"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 0 1 1-1h16a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1zm0 6a1 1 0 0 1 1-1h16a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1zm0 6a1 1 0 0 1 1-1h16a1 1 0 0 1 0 2H4a1 1 0 0 1-1-1z"
-              />
-            </svg>
-          </button>
-        </div>
+        
+        
 
         <motion.ul
-          className={`${isOpen ? "block" : "hidden"} lg:flex lg:gap-4`}
+          className={`${isOpen ? "mobile-links" : "hidden"} lg:flex lg:gap-4`}
           initial={{ x: 900 }}
           animate={{ x: 0 }}
           transition={{ duration: "1", delay: 1 }}
@@ -60,6 +51,7 @@ const NavBar = () => {
             <Link
               to="/intro"
               className="font-bold hover:text-green-400 hover:tracking-widest"
+              onClick={handleClick}
             >
               Home
             </Link>
@@ -69,6 +61,7 @@ const NavBar = () => {
             <Link
               to="/about"
               className="space-x-2 font-bold hover:text-green-400 hover:tracking-widest"
+              onClick={handleClick}
             >
               About
             </Link>
@@ -77,6 +70,7 @@ const NavBar = () => {
             <Link
               to="/projects"
               className="font-bold hover:text-green-400 hover:tracking-widest"
+              onClick={handleClick}
             >
               Projects
             </Link>
@@ -85,11 +79,15 @@ const NavBar = () => {
             <Link
               to="/contact"
               className="font-bold hover:text-green-400 hover:tracking-widest"
+              onClick={handleClick}
             >
               Contact
             </Link>
           </li>
         </motion.ul>
+        <div className="hamburger-menu" onClick={toggleMenu} >
+        <Hamburger toggled={isOpen} toggle={setOpen} />
+      </div>
       </nav>
     </div>
   );

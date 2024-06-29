@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "../components/Animation.css";
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
+import Projects from "./Projects";
 
 function Intro() {
   const glowVariants = {
@@ -20,34 +21,18 @@ function Intro() {
       <section className="body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <motion.div
-            initial={{
-              opacity: 0,
-              borderRadius: "50%",
-              boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)",
-              x: -100,
-            }}
-            animate={{
-              opacity: 2,
-              borderRadius: "0%",
-              rotateY: 360,
-              boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.5)",
-              x: 0,
-            }}
-            transition={{
-              duration: 2,
-              delay: 1,
-              type: "spring",
-              stiffness: 120,
-            }}
+            initial={{y:0}}
+            animate={{ y:[0,-20,0],opacity:1}}
+            transition={{ duration: 2,delay:2, repeat: Infinity }}
             className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
           >
             <img
-              className="object-cover object-center rounded-full border-4 border-solid border-black shadow-xl"
+              className="object-cover object-center rounded-full border-4 border-solid border-green-400 shadow-xl"
               alt="hero"
               src={coverImage}
             />
           </motion.div>
-          ;
+          
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <motion.h1
               className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
@@ -196,6 +181,8 @@ function Intro() {
           </ul>
         </div>
       </div>
+
+      <Projects/>
     </>
   );
 }

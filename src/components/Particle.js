@@ -12,7 +12,7 @@ const ParticleComponent = () => {
       autoPlay: true,
       background: {
         color: {
-          value: "#17163e",
+          value: "#000",
         },
         image: "",
         position: "",
@@ -55,7 +55,7 @@ const ParticleComponent = () => {
           },
           onHover: {
             enable: true,
-            mode: "light",
+            mode: "trail",
             parallax: {
               enable: false,
               force: 2,
@@ -69,9 +69,44 @@ const ParticleComponent = () => {
         },
         modes: {
           trail: {
-            delay: 1,
-            pauseOnStop: false,
-            quantity: 1,
+            delay: 0.005,
+            pauseOnStop: true,
+            quantity: 5,
+            particles: {
+              color: {
+                value: "#ff0000",
+                animation: {
+                  enable: true,
+                  speed: 400,
+                  sync: true,
+                },
+              },
+              collisions: {
+                enable: false,
+              },
+              links: {
+                enable: false,
+              },
+              move: {
+                outModes: {
+                  default: "destroy",
+                },
+                speed: 2,
+              },
+              size: {
+                value: {
+                  min: 1,
+                  max: 5,
+                },
+                animation: {
+                  enable: true,
+                  speed: 5,
+                  sync: true,
+                  startValue: "min",
+                  destroy: "max",
+                },
+              },
+            },
           },
           attract: {
             distance: 200,
@@ -143,17 +178,17 @@ const ParticleComponent = () => {
             area: {
               gradient: {
                 start: {
-                  value: "3b5e98",
+                  value: "#ffffff",
                 },
                 stop: {
-                  value: "#17163e",
+                  value: "#000000",
                 },
               },
               radius: 1000,
             },
             shadow: {
               color: {
-                value: "#17163e",
+                value: "#000000",
               },
               length: 2000,
             },
@@ -196,10 +231,10 @@ const ParticleComponent = () => {
             h: {
               count: 0,
               enable: true,
-              speed: 20,
+              speed: 50,
               decay: 0,
               delay: 0,
-              sync: true,
+              sync: false,
               offset: 0,
             },
             s: {
@@ -276,7 +311,7 @@ const ParticleComponent = () => {
           },
           random: false,
           size: false,
-          speed: 6,
+          speed: 2,
           spin: {
             acceleration: 0,
             enable: false,
@@ -300,14 +335,17 @@ const ParticleComponent = () => {
             mode: "delete",
             value: 0,
           },
-          value: 30,
+          value: 100,
         },
         opacity: {
-          value: 1,
+          value: {
+            min: 0.3,
+            max: 0.8,
+          },
           animation: {
             count: 0,
-            enable: false,
-            speed: 2,
+            enable: true,
+            speed: 0.5,
             decay: 0,
             delay: 0,
             sync: false,
@@ -332,17 +370,17 @@ const ParticleComponent = () => {
           close: true,
           fill: true,
           options: {},
-          type: ["circle", "square"],
+          type: "circle",
         },
         size: {
           value: {
-            min: 15,
-            max: 30,
+            min: 1,
+            max: 3,
           },
           animation: {
             count: 0,
-            enable: false,
-            speed: 5,
+            enable: true,
+            speed: 3,
             decay: 0,
             delay: 0,
             sync: false,
@@ -436,8 +474,8 @@ const ParticleComponent = () => {
         rotate: {
           value: 0,
           animation: {
-            enable: true,
-            speed: 5,
+            enable: false,
+            speed: 0,
             decay: 0,
             sync: false,
           },
@@ -463,11 +501,11 @@ const ParticleComponent = () => {
         links: {
           blink: false,
           color: {
-            value: "#fff",
+            value: "random",
           },
           consent: false,
           distance: 100,
-          enable: false,
+          enable: true,
           frequency: 1,
           opacity: 1,
           shadow: {
