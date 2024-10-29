@@ -1,16 +1,29 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import weather from "../images/Weather.png";
 import protfolio from "../images/Protfolio.png";
 import EmailValidator from "../images/Emailvalidator.png";
 import Sports from "../images/Sports-zone.png";
 import WordCounter from "../images/WordCounter.png";
 import iNotebook from "../images/iNotebook.png";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 function Projects() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      easing: 'ease-in-out', 
+    });
+  }, []);
   return (
     <section id="projects" className="mt-8 text-white">
       <h1 className="text-3xl font-bold mb-4 text-center">Projects</h1>
+      <ToastContainer position="top-center"/>
       <Project
         title="Weather Application"
         description="The Weather Application/website is built using HTML, CSS, and JavaScript. It provides users with real-time weather updates and forecasts, offering a user-friendly interface to stay informed about the current weather conditions. The application utilizes a Weather API to fetch and display accurate weather data."
@@ -85,33 +98,34 @@ const Project = ({
   const handleClick = (e) => {
     if (WebsiteLink === "#") {
       e.preventDefault();
-      alert("This project is not yet deployed.");
-    }
+      toast.error("This project is not yet deployed!", {
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } 
   };
+
   return (
-    <motion.div
-      initial={{ x: -2000, opacity: 0 }}
-      animate={{ x: 0, opacity: 2 }}
-      transition={{ duration: 1 }}
-      className="project  p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center0 mt-6 mb-2 text-white"
+    <div
+      
+      data-aos="zoom-in"
+      className="project p-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center mt-7 mb-3 mx-10 text-white justify-center bg-gray-900 bg-opacity-75"
     >
-      <motion.img
-        className={`mb-4 md:mb-0 md:mr-4 rounded-md ${imageSize} mx-auto md:mx-0 md:mr-4 md:ml-0`}
+      <img
+        className={`mb-4 md:mb-0 md:mr-4 ${imageSize} mx-auto md:mx-0 md:mr-4 md:ml-0`}
         src={imageSrc}
         alt={title}
-        animate={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 270, 270, 0],
-          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-        }}
-        transition={{ delay: 3 }}
       />
       <div>
         <h3 className="text-xl font-bold mb-2">
-          <i class="fas fa-tag text-red-500"></i> {title}
+          <i className="fas fa-tag text-red-500"></i> {title}
         </h3>
         <p>
-          <i class="fas fa-info-circle text-yellow-500"></i> {description}
+          <i className="fas fa-info-circle text-yellow-500"></i> {description}
         </p>
         <div className="mt-4">
           <strong>Build Technology:</strong> {buildTech}
@@ -136,8 +150,10 @@ const Project = ({
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
+
+
 
 export default Projects;
