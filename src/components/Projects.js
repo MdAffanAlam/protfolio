@@ -113,7 +113,7 @@ const Project = ({
     <div
       
       data-aos="zoom-in"
-      className="project p-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center mt-7 mb-3 mx-10 text-white justify-center bg-gray-900 bg-opacity-75"
+      className="project p-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center mt-7 mb-3 mx-8 text-white justify-center bg-gray-900 bg-opacity-75"
     >
       <img
         className={`mb-4 md:mb-0 md:mr-4 ${imageSize} mx-auto md:mx-0 md:mr-4 md:ml-0`}
