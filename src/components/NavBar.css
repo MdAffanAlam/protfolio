@@ -6,16 +6,16 @@
 
 /* Styling for the navigation bar */
 .nav {
-  background: #6a11cb; /* Fallback for older browsers */
-  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #6a11cb; 
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)); 
+  background: linear-gradient(to right, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)); 
   padding: 1rem;
 }
 
 /* Styling for the navigation elements */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -40,15 +40,35 @@ nav {
   color: white;
 }
 
-/* Styling for the hamburger menu */
+
 .hamburger-menu {
   display: none;
+  cursor: pointer;
 }
 
+
 /* Media query for smaller screens */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .hamburger-menu {
-    display: block; /* Display the hamburger menu icon */
+    display: block; 
+  }
+  
+  .custom-nav {
+    position: absolute;
+    top: 4.5em;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 1;
+    backdrop-filter: blur(3px); 
+    background-color: rgba(55, 65, 81, 0.25); 
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    color: whitesmoke; 
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+  }
+  .custom-nav > li {
+    margin-top: 12px;
   }
   
   .mobile_links {
@@ -57,3 +77,35 @@ nav {
     gap: 20px;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hamburger-menu {
+    display: block; 
+  }
+  
+  .custom-nav {
+    position: absolute;
+    top: 4.5em;
+    left: 0;     
+    right: 0;    
+    width: 100vw; 
+    z-index: 1;
+    backdrop-filter: blur(3px); 
+    background-color: rgba(55, 65, 81, 0.25); 
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    color: whitesmoke; 
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+  }
+
+  .custom-nav > li {
+    margin-top: 10px;
+  }
+
+  .mobile_links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+

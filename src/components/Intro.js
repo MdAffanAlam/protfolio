@@ -33,17 +33,17 @@ function Intro() {
             />
           </motion.div>
           
-          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left justify-center custom-intro">
+          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left justify-center items-center custom-intro ">
             <motion.h1
               className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
               initial={{ x: 900, opacity: 0 }}
               animate={{ x: 0, opacity: 2 }}
               transition={{ duration: "1", delay: 1 }}
             >
-              <span className="text-white  font-bold">Hi</span>
+              <span className="text-white  font-bold bg-gradient-to-r from-green-300 via-gray-300 to-pink-600 bg-clip-text text-transparent">Hi</span>
               <span className="text-white">,</span>
-              <span className="text-white ">My name is</span>{" "}
-              <span className="text-white  font-bold">MD AFFAN ALAM</span>{" "}
+              <span className="text-white "> My name is</span>{" "}
+              <span className="text-white  font-bold ">MD AFFAN ALAM</span>{" "}
               <br className=" text-white hidden lg:inline-block" />
               <span className="text-white">I'm a</span>{" "}
               <span className="font-bold text-green-500">
@@ -69,7 +69,7 @@ function Intro() {
               animate={{ x: 0, opacity: 2 }}
               transition={{ duration: "1", delay: 1 }}
             >
-              <span className="font-bold">Welcome</span> to the exciting world
+              <span className="font-bold ">Welcome</span> to the exciting world
               of Computer Science and Engineering! As a student in this field,
               you are embarking on a journey that combines creativity,
               problem-solving, and innovation. Here's a personalized description

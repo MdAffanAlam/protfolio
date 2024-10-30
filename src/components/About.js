@@ -11,7 +11,7 @@ const About = () => {
         className=" p-8 rounded-xl shadow-xl  mt-8 text-center body-font"
       >
         <motion.h1
-          className="text-3xl font-bold mb-4 text-white"
+          className="text-3xl font-bold mb-4 text-white bg-gradient-to-r from-green-500 via-gray-300 to-pink-600 bg-clip-text text-transparent"
           initial={{ x: -2000, opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}
           transition={{ duration: 1 }}
@@ -49,17 +49,7 @@ const About = () => {
           functional, real-world solutions. Through hands-on projects, I have
           honed my skills in various programming languages and frameworks,
           allowing me to navigate both the front-end and back-end domains of web
-          development. My commitment to coding extends beyond the academic
-          realm, as I actively seek out opportunities to contribute to
-          open-source projects, participate in coding competitions, and stay
-          abreast of the latest industry trends. This continuous engagement has
-          not only enriched my technical proficiency but has also nurtured a
-          creative mindset that thrives on problem-solving and innovation. In
-          essence, my journey as a B.Tech CSE student has cultivated a
-          deep-seated passion for coding and development, transforming my
-          academic pursuits into a dynamic exploration of turning concepts into
-          tangible, impactful solutions in the ever-evolving landscape of
-          technology.
+          development.
         </motion.p>
       </section>
 
