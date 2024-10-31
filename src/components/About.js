@@ -11,18 +11,19 @@ const About = () => {
         className=" p-8 rounded-xl shadow-xl  mt-8 text-center body-font"
       >
         <motion.h1
-          className="text-3xl font-bold mb-4 text-white bg-gradient-to-r from-green-500 via-gray-300 to-pink-600 bg-clip-text text-transparent"
+          className="text-3xl font-bold mb-4 bg-gradient-to-l from-gray-800 via-white to-red-600 bg-clip-text text-transparent"
           initial={{ x: -2000, opacity: 0 }}
-          animate={{ x: 0, opacity: 2 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
           About Me
         </motion.h1>
+
         <motion.div
           className="flex justify-center items-center"
-          initial={{ y: -2000, opacity: 0.6}}
-          animate={{ y: [0, -10, 0], opacity: 1}}
-          transition={{ duration: 2, repeat: Infinity }} 
+          initial={{ y: -2000, opacity: 0.6 }}
+          animate={{ y: [0, -10, 0], opacity: 1 }}
+          transition={{ duration: 2, repeat: Infinity }}
         >
           <img
             className="rounded-full mb-4 md:w-1/2 lg:w-1/4 xl:w-1/5"

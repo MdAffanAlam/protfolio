@@ -40,9 +40,9 @@ function Intro() {
               animate={{ x: 0, opacity: 2 }}
               transition={{ duration: "1", delay: 1 }}
             >
-              <span className="text-white  font-bold bg-gradient-to-r from-green-300 via-gray-300 to-pink-600 bg-clip-text text-transparent">Hi</span>
+              <span className="font-bold bg-gradient-to-l from-gray-300 via-white to-pink-500 bg-clip-text text-transparent">Hi</span>
               <span className="text-white">,</span>
-              <span className="text-white "> My name is</span>{" "}
+              <span className="text-white"> My name is</span>{" "}
               <span className="text-white  font-bold ">MD AFFAN ALAM</span>{" "}
               <br className=" text-white hidden lg:inline-block" />
               <span className="text-white">I'm a</span>{" "}

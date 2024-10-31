@@ -22,7 +22,7 @@ function Projects() {
   }, []);
   return (
     <section id="projects" className="mt-8 text-white">
-      <h1 className="text-3xl font-bold mb-4 text-center">Projects</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center bg-gradient-to-l from-gray-500 via-white to-red-600 bg-clip-text text-transparent">Projects</h1>
       <ToastContainer position="top-center"/>
       <Project
         title="Weather Application"

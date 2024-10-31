@@ -5,7 +5,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <>
-      <div className="social-icons text-center border-1 border-gray-50 p-1 w-auto h-auto">
+      <div className="social-icons text-center border-1 border-gray-50 p-1 w-auto h-auto bg-gray-800 bg-opacity-25">
         <motion.a
           initial={{ x: 900, opacity: 0 }}
           animate={{ x: 0, opacity: 2 }}

@@ -6,7 +6,7 @@ import "../components/Animation.css";
 function Contact() {
   return (
     <section className="px-4 md:px-0 py-16 md:py-20">
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white">
+      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-gray-400 via-white to-red-500 bg-clip-text text-transparent">
         Feel Free to Contact us
       </h1>
 
@@ -21,7 +21,7 @@ function Contact() {
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
 
-      <div className="container mx-auto mt-16 md:mt-24 flex justify-center items-center">
+      <div className="container-contact rounded-3xl mt-20 flex justify-center items-center bg-gray-700 bg-opacity-50">
      
         <motion.div
           className="max-w-2xl mx-auto mt-4 mb-4 shadow-xl rounded-lg md:w-2/3"

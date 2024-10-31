@@ -108,6 +108,12 @@ h2.programas {
     margin: 0 auto;
     overflow: hidden;
 }
+.container-contact{
+    width: 85%;
+    padding: 5%;
+    margin: 50px auto;
+    overflow: hidden;
+}
 
 .col {
     width: 23%;

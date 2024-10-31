@@ -30,7 +30,7 @@ const NavBar = () => {
             transition={{ duration: 1, delay: 1 }}
           />
           <motion.h3
-            className="font-bold text-xl hover:tracking-widest bg-gradient-to-r from-gray-300 via-white to-red-500 bg-clip-text text-transparent"
+            className="font-bold text-xl hover:tracking-widest bg-gradient-to-r from-gray-300 via-white to-red-400 bg-clip-text text-transparent"
             initial={{ x: -100, opacity: 0.2 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -48,7 +48,7 @@ const NavBar = () => {
           <li>
             <Link
               to="/intro"
-              className="font-bold hover:text-green-400 hover:tracking-widest flex items-center space-x-2"
+              className="font-bold hover:tracking-widest flex items-center space-x-2"
               onClick={handleClick}
             >
               <FaHome color="yellow" size={20} /> 
@@ -59,33 +59,33 @@ const NavBar = () => {
           <li>
             <Link
               to="/about"
-              className="font-bold hover:text-green-400 hover:tracking-widest flex items-center space-x-2"
+              className="font-bold hover:tracking-widest flex items-center space-x-2"
               onClick={handleClick}
             >
               <FaUser color="orange" size={20} /> 
-              <span>About</span>
+              <span > About</span>
             </Link>
           </li>
 
           <li>
             <Link
               to="/projects"
-              className="font-bold hover:text-green-400 hover:tracking-widest flex items-center space-x-2"
+              className="font-bold :tracking-widest flex items-center space-x-2"
               onClick={handleClick}
             >
               <FaProjectDiagram color="cyan" size={20} /> 
-              <span>Projects</span>
+              <span >Projects</span>
             </Link>
           </li>
 
           <li>
             <Link
               to="/contact"
-              className="font-bold hover:text-green-400 hover:tracking-widest flex items-center space-x-2"
+              className="font-bold hover:tracking-widest flex items-center space-x-2"
               onClick={handleClick}
             >
               <FaEnvelope color="lime" size={20} /> 
-              <span>Contact</span>
+              <span >Contact</span>
             </Link>
           </li>
         </motion.ul>
