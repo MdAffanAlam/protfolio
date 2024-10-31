@@ -1,12 +1,20 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { motion } from "framer-motion";
 import "../components/Animation.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function Contact() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      easing: 'ease-in-out', 
+    });
+  }, []);
   return (
     <section className="px-4 md:px-0 py-16 md:py-20">
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-gray-400 via-white to-red-500 bg-clip-text text-transparent">
+      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-l from-gray-400 via-white to-red-500 bg-clip-text text-transparent">
         Feel Free to Contact us
       </h1>
 
@@ -21,24 +29,17 @@ function Contact() {
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
 
-      <div className="container-contact rounded-3xl mt-20 flex justify-center items-center bg-gray-700 bg-opacity-50">
+      <div className="container-contact mt-18 flex justify-center items-center">
      
-        <motion.div
-          className="max-w-2xl mx-auto mt-4 mb-4 shadow-xl rounded-lg md:w-2/3"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+        <div
+          className="max-w-2xl mx-auto mt-4 mb-4 shadow-xl md:w-2/3 bg-gray-800 bg-opacity-50 py-12 px-6 rounded-2xl"
+          data-aos="zoom-in"
         >
           <div className="relative w-full max-w-md mx-auto">
-            <div className="h-4 border-t-4 border-indigo-800 absolute top-0 left-0 w-full"></div>
-            <div className="h-4 border-t-4 border-red-800 absolute bottom-0 left-0 w-full"></div>
-            <motion.form
+            <form
               action="https://formspree.io/f/myyqerzv"
               method="POST"
               className="mx-auto max-w-md relative z-10"
-              initial={{ opacity: 0, y: 2000 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1 }}
               data-netlify="true"
             >
               <label htmlFor="name" className="text-white font-bold mt-4 ml-2">
@@ -100,9 +101,9 @@ function Contact() {
               >
                 Send Message
               </motion.button>
-            </motion.form>
+            </form>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

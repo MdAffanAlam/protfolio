@@ -11,7 +11,7 @@ const About = () => {
         className=" p-8 rounded-xl shadow-xl  mt-8 text-center body-font"
       >
         <motion.h1
-          className="text-3xl font-bold mb-4 bg-gradient-to-l from-gray-800 via-white to-red-600 bg-clip-text text-transparent"
+          className="text-3xl font-bold mb-4 bg-gradient-to-l from-gray-400 via-white to-red-500 bg-clip-text text-transparent"
           initial={{ x: -2000, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
